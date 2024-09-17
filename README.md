@@ -11,6 +11,14 @@ Ce projet est un dashboard interactif permettant de prioriser les élèves à ac
 - **Génération d'un fichier CSV** listant les élèves nécessitant une attention particulière.
 
 
+## Cloner le Dépôt
+
+Ouvrez votre terminal ou invite de commande et utilisez la commande suivante pour cloner le dépôt :
+
+```bash
+git clone https://github.com/your-username/your-repository.git
+```
+
 ## Lancer le Dashboard
 
  Pour lancer le dashboard interactif avec Streamlit, exécutez la commande suivante :
