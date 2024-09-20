@@ -19,13 +19,13 @@ if st.checkbox("Show raw data"):
 
 def calculate_complexity(row):
     complexity = (
-        row['absences'] +
-        row['failures'] +
+        o.2 * row['absences'] +
+        5 * row['failures'] +
         (5 - row['famrel']) +
         (4 - row['Medu']) +
         (4 - row['Fedu']) +
         (5 - row['studytime']) +  # Assuming studytime is 1 to 4
-        row['age'] +               # Age might impact the complexity
+        (24- row['age']) +  # Age might impact the complexity
         (2 if row['famsize'] == 'GT3' else 0) +  # Add 2 for larger family size
         row['traveltime'] +  # Higher travel time might add to complexity
         (5 - row['freetime'])      # Less free time could increase complexity
