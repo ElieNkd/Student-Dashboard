@@ -36,7 +36,7 @@ def calculate_complexity(row):
 data['complexity'] = data.apply(calculate_complexity, axis=1)
 
 # Add a slider to let users adjust the complexity threshold
-complexity_threshold = st.slider('Complexity Threshold', min_value=20, max_value=100, value=30)
+complexity_threshold = st.slider('Complexity Threshold', min_value=10, max_value=50, value=20)
 
 # Filter students needing help (low final grade and high complexity)
 students_needing_help = data[(data['complexity'] > complexity_threshold) & (data['FinalGrade'] < 10)]
