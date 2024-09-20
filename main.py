@@ -19,7 +19,7 @@ if st.checkbox("Show raw data"):
 
 def calculate_complexity(row):
     complexity = (
-        o.2 * row['absences'] +
+        0.2 * row['absences'] +
         5 * row['failures'] +
         (5 - row['famrel']) +
         (4 - row['Medu']) +
