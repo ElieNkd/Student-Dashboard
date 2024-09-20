@@ -27,7 +27,7 @@ def calculate_complexity(row):
         (5 - row['studytime']) +  # Assuming studytime is 1 to 4
         row['age'] +               # Age might impact the complexity
         (2 if row['famsize'] == 'GT3' else 0) +  # Add 2 for larger family size
-        (5 - row['traveltime']) +  # Higher travel time might add to complexity
+        row['traveltime'] +  # Higher travel time might add to complexity
         (5 - row['freetime'])      # Less free time could increase complexity
     )
     return complexity
