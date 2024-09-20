@@ -76,7 +76,7 @@ if st.checkbox("Show Correlation Between Parental Education and Complexity"):
     mother_data = data[data['guardian'] == 'mother']
 
     plt.figure(figsize=(10, 6))
-    sns.boxplot(x='Medu', y='complexity', data=data)
+    sns.boxplot(x='Medu', y='complexity', data=mother_data)
     plt.title('Mother\'s Education vs Complexity')
     plt.xlabel('Mother\'s Education Level')
     plt.ylabel('Complexity')
@@ -87,7 +87,7 @@ if st.checkbox("Show Correlation Between Parental Education and Complexity"):
 
 
     plt.figure(figsize=(10, 6))
-    sns.boxplot(x='Fedu', y='complexity', data=data)
+    sns.boxplot(x='Fedu', y='complexity', data=father_data)
     plt.title('Father\'s Education vs Complexity')
     plt.xlabel('Father\'s Education Level')
     plt.ylabel('Complexity')
