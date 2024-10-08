@@ -50,28 +50,6 @@ st.subheader("Model Performance Metrics")
 st.write(f"Mean Squared Error (MSE): {mse}")
 st.write(f"R-squared (R2 score): {r2}")
 
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-
-# Load the dataset
-file_path = 'data/exercice_data.csv'
-df = pd.read_csv(file_path, encoding='latin1')
-
-# Select features and target variable
-X = df[['absences', 'failures', 'studytime', 'Medu', 'Fedu', 'famrel', 'age', 'traveltime', 'freetime']]
-y = df['FinalGrade']
-
-# Split the data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Create and train the Linear Regression model
-model = LinearRegression()
-model.fit(X_train, y_train)
-
-# Get the regression coefficients
-coefficients = model.coef_
-
 # Create a dictionary of weights for the complexity calculation
 weights = {
     'absences': -coefficients[0],
